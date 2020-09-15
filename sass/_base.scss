@@ -35,3 +35,10 @@ body {
     font-weight: 300;
     line-height: 1.6;
 }
+
+.container {
+    display: grid;
+    //min-content: similar to auto, have the height of content
+    //40vw: the height of third row changes according to view width
+    grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+}
