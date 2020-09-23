@@ -12,6 +12,7 @@
     background-color: $color-grey-light-1;
     grid-template-columns: repeat(2, 1fr);
     display: grid;
+    row-gap: 3.5rem;
 
     &__img {
         width: 100%;
@@ -33,6 +34,9 @@
 
     &__name {
         grid-column: 1/-1;
+        grid-row: 1/2;
+        z-index: 2;
+        align-self: end;
         font-family: $font-display;
         font-size: 1.6rem;
         text-align: center;
@@ -43,7 +47,13 @@
 
         width: 80%;
         justify-self: center;
-        
+
+        transform: translateY(50%);
+    }
+
+    &__location,
+    &__rooms {
+        margin-top: 2.5rem;
     }
 
     &__location,
@@ -51,10 +61,17 @@
     &__area,
     &__price {
 
+        font-size: 1.5rem;
+        margin-left: 2rem;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+
         svg {
             fill: $color-primary;
             height: 2rem;
             width: 2rem;
+            margin-right: 1rem;
         }
 
         p {}
