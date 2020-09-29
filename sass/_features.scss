@@ -3,18 +3,33 @@
 
     margin: 15rem 0;
 
-    display: grid;
-    // grid-template-columns: repeat(3, 1fr);
-    //auto-fit: It simply create as many tracks as can fit
-    //based on the width that we define.
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    //not necessary
-    // grid-template-rows: auto auto;
-    gap: 6rem;
-    align-items: start;
+
+    @supports(display: grid) {
+        display: grid;
+        // grid-template-columns: repeat(3, 1fr);
+        //auto-fit: It simply create as many tracks as can fit
+        //based on the width that we define.
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        //not necessary
+        // grid-template-rows: auto auto;
+        gap: 6rem;
+        align-items: start;
+    }
+
+
 }
 
 .feature {
+
+    float: left;
+    width: 33.3333%;
+    margin-bottom: 6rem;
+
+    @supports(display: grid) {
+        width: auto;
+        margin-bottom: 0;
+    }
+
     display: grid;
     grid-template-columns: min-content 1fr;
     row-gap: 1.5rem;
